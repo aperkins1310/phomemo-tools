@@ -79,13 +79,21 @@ def print_raster(file, image, line, lines = 0xff, mode = 0):
     file.write(GS + b'v0')   # GS v 0 : print raster bit image
     # 0: normal, 1 double width, 2 double heigh, 3 quadruple
     file.write(mode.to_bytes(1, 'little'))
-    # number of bytes / line
-    file.write(int((image.width + 7) / 8).to_bytes(2, 'little'))
-    # nulber of lines in the image
+
+    # Calculate the number of bytes/line including padding
+    padded_width = (image.width + 7) // 8
+    bytes_per_line = (padded_width + 3) & ~3
+    file.write(bytes_per_line.to_bytes(2, 'little'))
+
+    # Number of lines in the image
     file.write(lines.to_bytes(2, 'little'))
-    # bit image
+
+    # Create a padded image with padding on the left
     block = image.crop((0, line, image.width, line + lines))
-    stdout.write(block.tobytes())
+    padded_block = Image.new('1', (bytes_per_line * 8, lines), color=0)
+    padded_block.paste(block, (bytes_per_line * 8 - image.width, 0))
+
+    stdout.write(padded_block.tobytes())
     return
 
 def print_and_feed(file, lines = 1):

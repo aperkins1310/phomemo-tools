@@ -1,5 +1,5 @@
 //
-// Driver info file for Phomemo M02
+// Driver info file for Phomemo M02Pro
 //
 // Copyright © 2020 Laurent Vivier <laurent@vivier.eu>
 //
@@ -8,7 +8,7 @@
 #include <media.defs>
 #include <label.h>
 
-#media "w50h10/Label 50mmx25mm" 50mm 10mm
+#media "w50h10/Label 50mmx10mm" 50mm 10mm
 #media "w50h20/Label 50mmx20mm" 50mm 20mm
 #media "w50h25/Label 50mmx25mm" 50mm 25mm
 #media "w50h30/Label 50mmx30mm" 50mm 30mm
@@ -26,6 +26,23 @@
 #media "w50h130/Label 50mmx130mm" 50mm 130mm
 #media "w50h140/Label 50mmx140mm" 50mm 140mm
 #media "w50h150/Label 50mmx150mm" 50mm 150mm
+#media "w25h10/Label 25mmx10mm" 25mm 10mm
+#media "w25h20/Label 25mmx20mm" 25mm 20mm
+#media "w25h25/Label 25mmx25mm" 25mm 25mm
+#media "w25h30/Label 25mmx30mm" 25mm 30mm
+#media "w25h40/Label 25mmx40mm" 25mm 40mm
+#media "w25h50/Label 25mmx50mm" 25mm 50mm
+#media "w25h60/Label 25mmx60mm" 25mm 60mm
+#media "w25h70/Label 25mmx70mm" 25mm 70mm
+#media "w25h75/Label 25mmx75mm" 25mm 75mm
+#media "w15h10/Label 15mmx10mm" 15mm 10mm
+#media "w15h20/Label 15mmx20mm" 15mm 20mm
+#media "w15h25/Label 15mmx25mm" 15mm 25mm
+#media "w15h30/Label 15mmx30mm" 15mm 30mm
+#media "w15h40/Label 15mmx40mm" 15mm 40mm
+#media "w15h50/Label 15mmx50mm" 15mm 50mm
+#media "w15h60/Label 15mmx60mm" 15mm 60mm
+
 {
   Manufacturer "Phomemo"
   ModelName "M02 Pro"
@@ -59,6 +76,22 @@
   MediaSize "w50h130"
   MediaSize "w50h140"
   MediaSize "w50h150"
+  MediaSize "w25h10"
+  MediaSize "w25h20"
+  MediaSize "w25h25"
+  MediaSize "w25h30"
+  MediaSize "w25h40"
+  MediaSize "w25h50"
+  MediaSize "w25h60"
+  MediaSize "w25h70"
+  MediaSize "w25h75"
+  MediaSize "w15h10"
+  MediaSize "w15h20"
+  MediaSize "w15h25"
+  MediaSize "w15h30"
+  MediaSize "w15h40"
+  MediaSize "w15h50"
+  MediaSize "w15h60"
 
   VariablePaperSize Yes
   MinSize 0.00 0.00
