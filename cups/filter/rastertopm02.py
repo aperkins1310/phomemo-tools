@@ -91,7 +91,7 @@ def print_raster(file, image, line, lines = 0xff, mode = 0):
     # Create a padded image with padding on the left
     block = image.crop((0, line, image.width, line + lines))
     padded_block = Image.new('1', (bytes_per_line * 8, lines), color=0)
-    padded_block.paste(block, (bytes_per_line * 8 - image.width, 0))
+    padded_block.paste(block, ((bytes_per_line * 8 - image.width) // 2, 0))
 
     file.write(padded_block.tobytes())
     return
