@@ -93,7 +93,7 @@ def print_raster(file, image, line, lines = 0xff, mode = 0):
     padded_block = Image.new('1', (bytes_per_line * 8, lines), color=0)
     padded_block.paste(block, (bytes_per_line * 8 - image.width, 0))
 
-    stdout.write(padded_block.tobytes())
+    file.write(padded_block.tobytes())
     return
 
 def print_and_feed(file, lines = 1):
